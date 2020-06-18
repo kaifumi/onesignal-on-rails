@@ -4,6 +4,15 @@
     <title>OnesignalOnRails</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      window.OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "246c51e7-cbfa-4328-a3c0-bde7ede763f7",
+        });
+      });
+    </script>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
